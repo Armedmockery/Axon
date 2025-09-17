@@ -3,130 +3,135 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-<ImageView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="centerCrop"
-    android:background="@drawable/bg"/>
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="320dp"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:translationZ="5dp"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    android:background="@drawable/block"
-    android:id="@+id/cardBlock"
-    android:padding="24sp">
-<TextView
-    android:id="@+id/tvWelcome"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Welcome Back!"
-    android:textSize="28sp"
-    android:textStyle="bold"
-    android:textColor="#505050"
-    android:layout_marginBottom="28dp"
-    android:layout_marginTop="42dp"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <ImageView
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:padding="12dp"
-        android:src="@drawable/telephone"
-        android:alpha="0.8"
-        />
-    <EditText
-        android:id="@+id/et_username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Number"
-        android:background="@drawable/edittext_bg"
-        android:inputType="phone"
-        android:paddingLeft="56dp"
-        android:paddingBottom="12dp"
-        android:paddingRight="12dp"
-        android:paddingTop="12dp"
-        android:layout_marginBottom="12dp"/>
-</FrameLayout>
-    <FrameLayout
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg"/>
+    <ImageButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="16dp"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/qrcode"
+        android:background="@drawable/qr_bg"
+        android:translationZ="8dp"
+        android:elevation="16dp"/>
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:padding="12dp"
-            android:src="@drawable/key"
-            android:alpha="0.8"
-            />
-        <EditText
-            android:id="@+id/etPassword"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/edittext_bg"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:paddingLeft="56dp"
-            android:paddingBottom="12dp"
-            android:paddingRight="12dp"
-            android:paddingTop="12dp"
-            android:layout_marginBottom="12dp"/>
-    </FrameLayout>
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:translationZ="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/block"
+                android:id="@+id/cardBlock"
+                android:layout_margin="42dp"
+                android:padding="24dp">
+                <TextView
+                    android:id="@+id/tvWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign Up"
+                    android:textSize="28sp"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textColor="#505050"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginTop="42dp"/>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:padding="12dp"
+                        android:src="@drawable/telephone"
+                        android:alpha="0.8"
+                        />
+                    <EditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:textColor="#333333"
+                        android:textColorHint="#818181"
+                        android:background="@drawable/edittext_bg"
+                        android:fontFamily="@font/poppins"
+                        android:inputType="phone"
+                        android:paddingLeft="56dp"
+                        android:paddingBottom="12dp"
+                        android:paddingRight="12dp"
+                        android:paddingTop="12dp"
+                        />
+                </FrameLayout>
 
-    <CheckBox
-        android:id="@+id/chkRemember"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FFC107"
-        android:layout_gravity="left"
-        android:text="Remember Me"/>
+                <CheckBox
+                    android:id="@+id/chkRemember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:button="@drawable/decision_bg"
+                    android:text="Remember Me"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="#333333"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:layout_margin="8dp"
+                    android:minHeight="24dp"
+                    app:backgroundTint="@null"/>
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="GET OTP"
+                    android:background="@drawable/button_bg"
+                    android:fontFamily="@font/poppins"
+                    app:backgroundTint="@null"
+                    android:padding="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#2E2D2D"
+                    android:layout_margin="16dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="top|center_horizontal"
+                android:elevation="36dp"
+                android:translationZ="36dp"
+                android:src="@drawable/logo_placeholder"
+                app:layout_constraintStart_toStartOf="@id/cardBlock"
+                app:layout_constraintEnd_toEndOf="@id/cardBlock"
+                app:layout_constraintBottom_toTopOf="@id/cardBlock"
+                android:translationY="50dp"/>
+            <TextView
+                android:id="@+id/tvSignupRedirect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? Log In!"
+                android:textColor="#2E86DE"
+                android:layout_margin="12dp"
+                android:fontFamily="@font/poppins_extralight_italic"
+                app:layout_constraintTop_toBottomOf="@id/cardBlock"
+                app:layout_constraintStart_toStartOf="@id/cardBlock"
+                app:layout_constraintEnd_toEndOf="@id/cardBlock"
+                android:textSize="14sp"/>
 
-<!-- Login Button -->
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="PROCEED"
-        android:background="@drawable/button_bg"
-        app:backgroundTint="@null"
-        android:padding="14dp"
-        android:textStyle="bold"
-        android:textColor="#2E2D2D"
-        android:layout_margin="16dp"/>
-
-
-<TextView
-    android:id="@+id/tvSignupRedirect"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Don't have an account? Sign Up"
-    android:textColor="#2E86DE"
-    android:textSize="14sp"/>
-<TextView
-    android:id="@+id/tvForgotPassword"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Forgot Password?"
-    android:textColor="#2E86DE"
-    android:textSize="14sp" />
-</LinearLayout>
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="top|center_horizontal"
-        app:layout_constraintBottom_toTopOf="@id/cardBlock"
-        app:layout_constraintStart_toStartOf="@id/cardBlock"
-        app:layout_constraintEnd_toEndOf="@id/cardBlock"
-        android:translationY="60dp"
-        android:elevation="8dp"
-        android:background="@drawable/logo_placeholder"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 </FrameLayout>

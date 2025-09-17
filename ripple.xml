@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#66FFFFFF"> <!-- Light white ripple effect -->
+    <item>
+        <selector>
+            <!-- Pressed state -->
+            <item android:state_pressed="true">
+                <shape android:shape="rectangle">
+                    <solid android:color="#FF7E71"/> <!-- Gold color when pressed -->
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <!-- Default state -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#F9695A"/> <!-- Original yellow color -->
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>
